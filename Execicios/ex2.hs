@@ -10,5 +10,9 @@ numDig :: Int -> Int
 numDig n =
  if n == 0
   then 0
-  else 1 + numDig (n / 10)
+  else 1 + numDig (div n 10)
 
+somaDig :: Int -> Int
+somaDig n
+ | n == 0 = 0
+ | otherwise = rem n 10 + somaDig (div n 10)
