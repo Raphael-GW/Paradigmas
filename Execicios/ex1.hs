@@ -16,7 +16,7 @@ anoBis :: Int -> Bool
 anoBis a =
  if rem a 4 == 0
   then condicao
-  else False
+	  else False
  where
   condicao = if rem a 400 == 0 || not ((rem a 100 == 0))
               then True
