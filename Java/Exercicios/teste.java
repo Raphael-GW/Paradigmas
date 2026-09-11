@@ -7,10 +7,11 @@ public class teste{
 
 		Scanner input = new Scanner(System.in);
 
-		int num;
+		String num;
 		System.out.println("digite um número ");
-		num = input.nextInt();
+		num = input.nextLine ();
 
 		System.out.println("O número digitado foi: " + num);
+		input.close();
 	}
 }
