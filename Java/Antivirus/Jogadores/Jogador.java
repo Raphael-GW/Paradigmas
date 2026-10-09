@@ -12,7 +12,16 @@ public class Jogador {
 		}
 	}
 
-	public void setATK (int atk) {this.ATK = atk;}
-	public void setDEF (int def) {this.DEF = def;}
+	public setATK (int atk) {this.ATK = atk;}
+	public setDEF (int def) {this.DEF = def;}
+
+	public int getATK () {return this.ATK;}
+	public int getDEF () {return this.ATK;}
+	
+	public void 
+	
+	public void imprime_status (){
+		System.out.printf ("%d/%d\n", this.getATK(), this.getDEF());
+	}
 
 }
