@@ -1,14 +1,14 @@
 public class Jogador {
 	int ATK;
 	int DEF;
-	Pos pos;
+	Setor set;
 
 	public void Jogador () {}
-	public void Jogador (int atk, int def, int x, int y){
+	public void Jogador (int atk, int def){
 		if (atk > 0 && def > 0){
 			this.setATK (atk);
 			this.setDEF (def);
-			this.pos = new Pos (x, y);
+			this.set = new Setor (3, 3);
 		}
 	}
 
@@ -18,7 +18,21 @@ public class Jogador {
 	public int getATK () {return this.ATK;}
 	public int getDEF () {return this.ATK;}
 	
-	public void 
+	public void check_porta (char dir){
+
+	}
+
+	public void movimentar (char direcao){
+		char dir = Character.toLowerCase (direcao);
+
+		while (dir != 'a' || dir != 'd' || dir != 'w' || dir != 's'){
+			System.out.print ("Direcao incorreta")
+		}
+	}
+
+	public void atacar (Inimigo i){i.DEF -= this.ATK;}
+
+	piblic void procurar (){}
 	
 	public void imprime_status (){
 		System.out.printf ("%d/%d\n", this.getATK(), this.getDEF());
