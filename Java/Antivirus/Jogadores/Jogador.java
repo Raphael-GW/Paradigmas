@@ -1,7 +1,9 @@
+import java.util.Scanner;
+
 public class Jogador {
 	int ATK;
 	int DEF;
-	Setor set;
+	Setor set; //verificar
 
 	public void Jogador () {}
 	public void Jogador (int atk, int def){
@@ -16,7 +18,7 @@ public class Jogador {
 	public setDEF (int def) {this.DEF = def;}
 
 	public int getATK () {return this.ATK;}
-	public int getDEF () {return this.ATK;}
+	public int getDEF () {return this.DEF;}
 	
 	public void check_porta (char dir){
 
@@ -30,12 +32,23 @@ public class Jogador {
 		}
 	}
 
-	public void atacar (Inimigo i){i.DEF -= this.ATK;}
+	public void atacar (Inimigo i){
+		if (set.tem_inimigo()){
+			System.out.println ("Qual inimigo você quer atacar? ");
+			set.listar_inimigo();
+			Scanner scanner = new Scanner(System.in);
+
+			int inimigo = scanner.nextInt();
+			
+		}
+	}
 
 	piblic void procurar (){}
 	
 	public void imprime_status (){
 		System.out.printf ("%d/%d\n", this.getATK(), this.getDEF());
 	}
+
+	public abstract void imprime_jogador (){};
 
 }

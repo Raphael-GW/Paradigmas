@@ -1,6 +1,7 @@
 public class Inimigo {
     int ATK;
     int DEF;
+    Bool vida;
 
     public void Inimigo () {}
     public void Inimigo (int ATK, int DEF){
@@ -10,11 +11,17 @@ public class Inimigo {
         }
     }
 
-    setATK (int ATK){this.ATK = ATK;}
-    setDEF (int DEF){this.DEF = DEF;}
+    public setATK (int ATK){this.ATK = ATK;}
+    public setDEF (int DEF){this.DEF = DEF;}
 
-    public void atacar (){
-        
+    public Bool getVida (){return this.vida;}
+
+    public void atacar (Jogador p){
+        p.DEF -= this.ATK;
+    }
+
+    public void imprime_inimigo (){
+
     }
 
 }
